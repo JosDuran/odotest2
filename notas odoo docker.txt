@@ -1,0 +1,3 @@
+odoo 14  funciona con postgress 13  y 14 pero no 15
+odoo 15 funciona con postgress 15
+odoo 16 funciona con postgres 15

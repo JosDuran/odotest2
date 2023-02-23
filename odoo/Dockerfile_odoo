@@ -1,0 +1,12 @@
+FROM odoo:16
+USER 0
+# Create logs directory and set permissions for odoo user
+RUN  mkdir /etc/logs
+RUN  touch /etc/logs/odoo.log
+RUN  chown odoo /etc/logs/odoo.log
+RUN  chown odoo /etc/logs
+USER odoo
+
+
+# Set working directory to Odoo's addons directory
+WORKDIR /mnt/extra-addons
