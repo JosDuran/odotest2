@@ -3,3 +3,4 @@ docker-compose up --build
 docker volume prune
 docker container prune
 docker image prune
+docker logs -f --since 0m --tail 10 02 

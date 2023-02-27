@@ -1,12 +1,11 @@
 FROM odoo:16
 USER 0
+RUN apt-get update && apt-get install -y iputils-ping
 # Create logs directory and set permissions for odoo user
-RUN  mkdir /etc/logs
-RUN  touch /etc/logs/odoo.log
-RUN  chown odoo /etc/logs/odoo.log
-RUN  chown odoo /etc/logs
+
+RUN  touch /var/log/odoo/odoo.log
+RUN  chown odoo /var/log/odoo
+RUN  chown odoo /var/log/odoo/odoo.log
 USER odoo
-
-
 # Set working directory to Odoo's addons directory
 WORKDIR /mnt/extra-addons
