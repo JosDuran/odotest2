@@ -1,24 +1,23 @@
+# -*- coding: utf-8 -*-
+# Part of Odoo. See LICENSE file for full copyright and licensing details.
 {
-    'name': "My Modulo",
-    'version': '15.0.4.0.0',
-    'sequence': 1,
-
-    'description': """
-        Módulo CRM para la gestión de registro...
-    """,
-
-    'author': "Odoo",
-    'website': "http://odoo.com",
-    
-    'category': 'Escuela de Conduccion',
-    'license': 'LGPL-3',
-
-    # any module necessary for this one to work correctly
-    'depends': ['base'],
-
-    # always loaded
+    'name' : 'Demo Module',
+    'version' : '1.2',
+    'summary': 'Digitalchina Demo Module',
+    'sequence': -100,
+    'description': """DEMO Module""",
+    'category': 'Productivity/Demo',
+    'website': 'https://www.digitalchina.com',
+    'images' : [],
+    'depends' : ['sale'],
     'data': [
         'security/ir.model.access.csv',
-        'views/views.xml',
+        'views/foo.xml',
+        'views/sale.xml',
     ],
+    'demo': [],
+    'qweb': [],
+    'installable': True,
+    'application': True,
+    'auto_install': False
 }

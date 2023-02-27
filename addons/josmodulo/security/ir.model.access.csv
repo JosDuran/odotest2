@@ -1,2 +1,2 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_certificados_usuario,certificados.usuario,model_certificados_cert,group_shool_startel_usuario,1,1,1,1
+access_dc_foo,account.dc.foo,model_dc_foo,,1,1,1,1

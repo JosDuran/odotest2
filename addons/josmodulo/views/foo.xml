@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="tree_foo" model="ir.ui.view">
+      <field name="name">dc.foo.tree</field>
+      <field name="model">dc.foo</field>
+      <field name="arch" type="xml">
+          <tree>
+             <field name="name" />
+             <field name="state" />
+          </tree>
+      </field>
+  </record>
+
+  <record id="form_foo" model="ir.ui.view">
+      <field name="name">dc.foo.form</field>
+      <field name="model">dc.foo</field>
+      <field name="arch" type="xml">
+          <form string="Account">
+            <sheet>
+              <group>
+                <group>
+                  <field name="name" />
+                </group>
+                <group>
+                  <field name="state" />
+                </group>
+              </group>
+            </sheet>
+          </form>
+      </field>
+  </record>
+
+  <record id="action_foo" model="ir.actions.act_window">
+      <field name="name">Action Foo</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">dc.foo</field>
+      <field name="view_mode">tree,kanban,form</field>
+      <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+              创建你的第一个 Foo 
+          </p>
+      </field>
+  </record>
+
+  <menuitem id="foo_root"
+      name="Foo"
+      sequence="10"/>
+
+  <menuitem id="foo_bar_root"
+      name="Bar"
+      parent="foo_root"
+      sequence="10"/>
+
+  <menuitem id="foo_bar"
+      name="Bar"
+      parent="foo_bar_root"
+      sequence="10"
+      action="action_foo"/>
+</odoo>
